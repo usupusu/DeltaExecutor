@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .btn-group{display:flex;flex-direction:column;gap:8px;align-items:center;width:100%}
+        .btn{display:inline-block;padding:14px;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;transition:.3s;text-decoration:none;text-align:center;width:100%}
+        .btn:hover{transform:scale(1.02);box-shadow:0 5px 25px rgba(108,92,231,0.3)}
+        .btn-ios{background:linear-gradient(135deg,#00C853,#00A843)}
+        .btn-ios:hover{box-shadow:0 5px 25px rgba(0,200,83,0.4)}
+        .btn-android{background:linear-gradient(135deg,#FF6B00,#CC5500)}
+        .btn-android:hover{box-shadow:0 5px 25px rgba(255,107,0,0.4)}
+        .container{max-width:1000px;margin:0 auto}
+        header{padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+        .logo{font-size:24px;font-weight:700;background:linear-gradient(135deg,#6c5ce7,#a29bfe);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .tabs{display:flex;gap:8px;background:rgba(255,255,255,0.03);padding:4px;border-radius:12px;border:1px solid rgba(255,255,255,0.06)}
+        .tab{padding:10px 24px;border-radius:8px;font-size:14px;font-weight:500;color:#94a3b8;text-decoration:none;transition:.3s;display:inline-block}
+        .tab:hover{color:#fff}
+        .tab.active{background:#6c5ce7;color:#fff;box-shadow:0 4px 15px rgba(108,92,231,0.3)}
+        .download-section{padding:60px 0;text-align:center}
+        .download-section h1{font-size:2.5rem;margin-bottom:10px}
+        .download-section p{color:#94a3b8;margin-bottom:40px}
+        .download-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:700px;margin:0 auto}
+        .download-card{background:rgba(255,255,255,0.03);padding:36px 28px;border-radius:24px;border:1px solid rgba(255,255,255,0.06);transition:.3s}
+        .download-card:hover{border-color:rgba(108,92,231,0.3);transform:translateY(-6px)}
+        .download-card .icon{font-size:3.4rem;display:block;margin-bottom:8px}
+        .download-card h3{font-size:1.5rem;font-weight:700}
+        .download-card p{color:#94a3b8;font-size:.95rem;margin:4px 0 16px}
+        .download-card .version-tag{display:inline-block;background:rgba(255,255,255,0.04);padding:4px 14px;border-radius:50px;font-size:.75rem;color:#4a5568;border:1px solid rgba(255,255,255,0.06);margin-top:12px}
+        footer{padding:32px 0;border-top:1px solid rgba(255,255,255,0.04);text-align:center;color:#4a5568;font-size:.85rem}
+        footer p{margin:4px 0}
+        .direct-link{display:block;width:100%;padding:14px;background:linear-gradient(135deg,#00C853,#00A843);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;transition:.3s;text-decoration:none;text-align:center}
+        .direct-link:hover{transform:scale(1.02);box-shadow:0 5px 25px rgba(0,200,83,0.4)}
+        @media(max-width:640px){.download-grid{grid-template-columns:1fr}.tabs{gap:4px}.tab{padding:8px 14px;font-size:12px}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Δ Delta</div>
+            <div class="tabs">
+                <a href="index.html" class="tab">Home</a>
+                <a href="download.html" class="tab active">Download</a>
+                <a href="scripts.html" class="tab">Scripts</a>
+                <a href="faq.html" class="tab">FAQ</a>
+            </div>
+        </header>
+
+        <section class="download-section">
+            <h1>📥 Downloads</h1>
+            <p>Choose your platform and start scripting in seconds.</p>
+            <div class="download-grid">
+                <div class="download-card">
+                    <span class="icon">🍎</span>
+                    <h3>iOS</h3>
+                    <p>iPhone · iPad · iPod Touch</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-ios" onclick="downloadFile('ios')">⚡ Direct Install</a>
+                        <a href="https://cdn.glopdelivery.com/file/Delta-2.733.988.ipa" class="direct-link">📦 Download IPA</a>
+                    </div>
+                    <span class="version-tag">v2.733.988</span>
+                </div>
+                <div class="download-card">
+                    <span class="icon">🤖</span>
+                    <h3>Android</h3>
+                    <p>Android 7.0+ · ARM64</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-android" onclick="downloadFile('apk')">📦 Download APK</a>
+                    </div>
+                    <span class="version-tag">v2.733.988</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Delta • All rights reserved.</p>
+            <p>~ Made By LEGEND ~</p>
+        </footer>
+    </div>
+
+    <script>
+        function downloadFile(type) {
+            var links = {
+                'ios': 'itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist',
+                'apk': 'https://delta.filenetwork.vip/android.html'
+            };
+            window.open(links[type], '_blank');
+        }
+    </script>
+</body>
+</html>
