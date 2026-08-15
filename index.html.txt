@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Delta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Δ Delta</div>
+            <div class="tabs">
+                <a href="index.html" class="tab active">Home</a>
+                <a href="download.html" class="tab">Download</a>
+                <a href="scripts.html" class="tab">Scripts</a>
+                <a href="faq.html" class="tab">FAQ</a>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>Power Meets Performance<br><span>Delta Executor</span></h1>
+            <p>Experience the most advanced Roblox executor — built for speed, stability, and undetectable performance.</p>
+            <div class="hero-actions">
+                <a href="download.html" class="btn-primary">Download Now</a>
+                <a href="#featuresSection" class="btn-secondary">Explore</a>
+            </div>
+        </section>
+
+        <section class="features" id="featuresSection">
+            <h2>Why Choose Delta?</h2>
+            <div class="features-grid">
+                <div class="feature-card"><span class="icon">🛡️</span><h4>Undetectable</h4><p>Advanced bypass technology that keeps you safe.</p></div>
+                <div class="feature-card"><span class="icon">🔄</span><h4>Auto Updates</h4></div>
+                <div class="feature-card"><span class="icon">🎮</span><h4>Universal Compatibility</h4><p>Works flawlessly with every Roblox game.</p></div>
+                <div class="feature-card"><span class="icon">🔒</span><h4>Zero Risk</h4><p>Built‑in protection against detection.</p></div>
+                <div class="feature-card"><span class="icon">📱</span><h4>Cross‑Platform</h4><p>Available on iOS & Android.</p></div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Delta • All rights reserved. </p>
+        </footer>
+    </div>
+</body>
+</html>
