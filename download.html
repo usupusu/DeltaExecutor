@@ -54,7 +54,6 @@
             <h1>📥 Downloads</h1>
             <p>Choose your platform and start scripting in seconds.</p>
 
-            <!-- STATS BAR -->
             <div class="stats-bar" id="statsBar">
                 <div class="stat-item">
                     <div class="num" id="totalDownloads">0</div>
@@ -100,76 +99,64 @@
     </div>
 
     <script>
-        // ===== STATS SYSTEM =====
-        function getStats() {
-            return JSON.parse(localStorage.getItem('delta_stats') || '{"total":0,"ios":0,"android":0}');
+        const BIN_ID = '6a819281da38895dfeeafa86';
+        const API_KEY = '$2a$10$x5Ixo40Y2TSU8TT/hXDhEuupINqfXxtQhe0Q27dzhlp7f.OZtd.4u';
+
+        async function getStats() {
+            try {
+                const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+                    headers: { 'X-Master-Key': API_KEY }
+                });
+                const data = await res.json();
+                return data.record || { total: 0, ios: 0, android: 0 };
+            } catch {
+                return { total: 0, ios: 0, android: 0 };
+            }
         }
 
-        function saveStats(stats) {
-            localStorage.setItem('delta_stats', JSON.stringify(stats));
+        async function updateStats(type) {
+            try {
+                const stats = await getStats();
+                stats.total = (stats.total || 0) + 1;
+                if (type === 'ios') stats.ios = (stats.ios || 0) + 1;
+                else if (type === 'android') stats.android = (stats.android || 0) + 1;
+                
+                await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': API_KEY
+                    },
+                    body: JSON.stringify(stats)
+                });
+                return stats;
+            } catch {
+                return { total: 0, ios: 0, android: 0 };
+            }
         }
 
-        function updateStatsDisplay() {
-            const stats = getStats();
+        async function updateStatsDisplay() {
+            const stats = await getStats();
             document.getElementById('totalDownloads').textContent = stats.total || 0;
             document.getElementById('iosCount').textContent = stats.ios || 0;
             document.getElementById('androidCount').textContent = stats.android || 0;
         }
 
-        function incrementStats(platform) {
-            const stats = getStats();
-            stats.total = (stats.total || 0) + 1;
-            if (platform === 'ipa' || platform === 'ios') {
-                stats.ios = (stats.ios || 0) + 1;
-            } else if (platform === 'apk' || platform === 'android') {
-                stats.android = (stats.android || 0) + 1;
-            }
-            saveStats(stats);
-            updateStatsDisplay();
-        }
-
-        // ===== DOWNLOAD HANDLER =====
-        function downloadFile(type) {
-            var links = {
+        async function downloadFile(type) {
+            const links = {
                 'ios': 'itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist',
                 'ipa': 'https://cdn.glopdelivery.com/file/Delta-2.733.988.ipa',
                 'apk': 'https://delta.filenetwork.vip/android.html'
             };
 
-            // Track the download
-            if (type === 'ipa' || type === 'ios') {
-                incrementStats('ios');
-            } else if (type === 'apk') {
-                incrementStats('android');
-            }
+            if (type === 'ipa' || type === 'ios') await updateStats('ios');
+            else if (type === 'apk') await updateStats('android');
 
-            // Open the link
-            if (type === 'ios') {
-                window.open(links[type], '_blank');
-            } else {
-                window.open(links[type], '_blank');
-            }
+            await updateStatsDisplay();
+            window.open(links[type], '_blank');
         }
 
-        // ===== LOG VISITS =====
-        async function logVisit() {
-            try {
-                const res = await fetch('https://api.ipify.org?format=json');
-                const data = await res.json();
-                const visits = JSON.parse(localStorage.getItem('delta_visits') || '[]');
-                visits.push({
-                    ip: data.ip,
-                    browser: navigator.userAgent.split(' ').slice(0,3).join(' '),
-                    device: /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop',
-                    time: new Date().toISOString()
-                });
-                localStorage.setItem('delta_visits', JSON.stringify(visits));
-            } catch(e) {}
-        }
-
-        // ===== INIT =====
         updateStatsDisplay();
-        document.addEventListener('DOMContentLoaded', logVisit);
     </script>
 </body>
 </html>
