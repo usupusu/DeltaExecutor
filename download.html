@@ -29,13 +29,11 @@
         .download-card h3{font-size:1.5rem;font-weight:700}
         .download-card p{color:#94a3b8;font-size:.95rem;margin:4px 0 16px}
         .download-card .version-tag{display:inline-block;background:rgba(255,255,255,0.04);padding:4px 14px;border-radius:50px;font-size:.75rem;color:#4a5568;border:1px solid rgba(255,255,255,0.06);margin-top:12px}
-        .stats-bar{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:20px 0 30px;padding:16px;background:rgba(255,255,255,0.02);border-radius:12px;border:1px solid rgba(255,255,255,0.06)}
-        .stat-item{text-align:center}
-        .stat-item .num{font-size:24px;font-weight:700;color:#6c5ce7}
-        .stat-item .label{color:#94a3b8;font-size:12px;text-transform:uppercase;letter-spacing:1px}
         footer{padding:32px 0;border-top:1px solid rgba(255,255,255,0.04);text-align:center;color:#4a5568;font-size:.85rem}
         footer p{margin:4px 0}
-        @media(max-width:640px){.download-grid{grid-template-columns:1fr}.tabs{gap:4px}.tab{padding:8px 14px;font-size:12px}.stats-bar{gap:15px}}
+        .direct-link{display:block;width:100%;padding:14px;background:linear-gradient(135deg,#00C853,#00A843);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;transition:.3s;text-decoration:none;text-align:center}
+        .direct-link:hover{transform:scale(1.02);box-shadow:0 5px 25px rgba(0,200,83,0.4)}
+        @media(max-width:640px){.download-grid{grid-template-columns:1fr}.tabs{gap:4px}.tab{padding:8px 14px;font-size:12px}}
     </style>
 </head>
 <body>
@@ -53,30 +51,14 @@
         <section class="download-section">
             <h1>📥 Downloads</h1>
             <p>Choose your platform and start scripting in seconds.</p>
-
-            <div class="stats-bar" id="statsBar">
-                <div class="stat-item">
-                    <div class="num" id="totalDownloads">0</div>
-                    <div class="label">Total Downloads</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num" id="iosCount">0</div>
-                    <div class="label">iOS Downloads</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num" id="androidCount">0</div>
-                    <div class="label">Android Downloads</div>
-                </div>
-            </div>
-
             <div class="download-grid">
                 <div class="download-card">
                     <span class="icon">🍎</span>
                     <h3>iOS</h3>
                     <p>iPhone · iPad · iPod Touch</p>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-ios" onclick="downloadFile('ios', event)">⚡ Direct Install</a>
-                        <a href="#" class="btn btn-ios" onclick="downloadFile('ipa', event)">📦 Download IPA</a>
+                        <a href="#" class="btn btn-ios" onclick="downloadFile('ios')">⚡ Direct Install</a>
+                        <a href="https://cdn.glopdelivery.com/file/Delta-2.733.988.ipa" class="direct-link">📦 Download IPA</a>
                     </div>
                     <span class="version-tag">v2.733.988</span>
                 </div>
@@ -85,7 +67,7 @@
                     <h3>Android</h3>
                     <p>Android 7.0+ · ARM64</p>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-android" onclick="downloadFile('apk', event)">📦 Download APK</a>
+                        <a href="#" class="btn btn-android" onclick="downloadFile('apk')">📦 Download APK</a>
                     </div>
                     <span class="version-tag">v2.733.988</span>
                 </div>
@@ -99,71 +81,13 @@
     </div>
 
     <script>
-        const BIN_ID = '6a819281da38895dfeeafa86';
-        const API_KEY = '$2a$10$x5Ixo40Y2TSU8TT/hXDhEuupINqfXxtQhe0Q27dzhlp7f.OZtd.4u';
-
-        async function getStats() {
-            try {
-                const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
-                    headers: { 'X-Master-Key': API_KEY }
-                });
-                const data = await res.json();
-                return data.record || { total: 0, ios: 0, android: 0 };
-            } catch {
-                return { total: 0, ios: 0, android: 0 };
-            }
-        }
-
-        async function updateStats(type) {
-            try {
-                const stats = await getStats();
-                stats.total = (stats.total || 0) + 1;
-                if (type === 'ios' || type === 'ipa') stats.ios = (stats.ios || 0) + 1;
-                else if (type === 'apk') stats.android = (stats.android || 0) + 1;
-                
-                await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-Master-Key': API_KEY
-                    },
-                    body: JSON.stringify(stats)
-                });
-                return stats;
-            } catch {
-                return { total: 0, ios: 0, android: 0 };
-            }
-        }
-
-        async function updateStatsDisplay() {
-            const stats = await getStats();
-            document.getElementById('totalDownloads').textContent = stats.total || 0;
-            document.getElementById('iosCount').textContent = stats.ios || 0;
-            document.getElementById('androidCount').textContent = stats.android || 0;
-        }
-
-        // FIXED: downloadFile with event parameter
-        window.downloadFile = async function(type, event) {
-            if (event) event.preventDefault();
-            
-            const links = {
+        function downloadFile(type) {
+            var links = {
                 'ios': 'itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist',
-                'ipa': 'https://cdn.glopdelivery.com/file/Delta-2.733.988.ipa',
                 'apk': 'https://delta.filenetwork.vip/android.html'
             };
-
-            if (type === 'ipa' || type === 'ios') await updateStats('ios');
-            else if (type === 'apk') await updateStats('android');
-
-            await updateStatsDisplay();
-            
-            if (links[type]) {
-                window.open(links[type], '_blank');
-            }
+            window.open(links[type], '_blank');
         }
-
-        // Load stats on page load
-        updateStatsDisplay();
     </script>
 </body>
 </html>
