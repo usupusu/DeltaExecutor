@@ -3,19 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Delta</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .dev-panel{display:none;background:rgba(26,26,46,0.95);border:2px solid #6c5ce7;border-radius:12px;padding:20px;margin:20px 0;backdrop-filter:blur(10px)}
-        .dev-panel h3{color:#6c5ce7;margin-bottom:10px;font-size:18px}
-        .dev-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-        .dev-btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#94a3b8;padding:10px;border-radius:8px;cursor:pointer;transition:.3s;font-size:13px}
-        .dev-btn:hover{background:rgba(108,92,231,0.2);border-color:#6c5ce7;color:#fff}
-        .dev-close{background:rgba(237,66,69,0.15);border:1px solid rgba(237,66,69,0.2);color:#ED4245}
-        .dev-close:hover{background:rgba(237,66,69,0.3)}
-        .dev-indicator{position:fixed;bottom:10px;right:10px;color:#6c5ce7;font-size:11px;opacity:0.3;z-index:999;cursor:pointer}
-        .dev-indicator.active{opacity:1}
-        @media(max-width:480px){.dev-grid{grid-template-columns:1fr}}
-    </style>
 </head>
 <body>
     <div class="container">
@@ -50,40 +39,8 @@
         </section>
 
         <footer>
-            <p>© 2026 Delta • All rights reserved.</p>
+            <p>© 2026 Delta • All rights reserved. </p>
         </footer>
     </div>
-
-    <!-- Developer Panel -->
-    <div class="dev-panel" id="devPanel">
-        <h3>🛠️ Developer Panel</h3>
-        <div class="dev-grid">
-            <button class="dev-btn" onclick="alert('Delta Executor v2.733.988\nPages: Home, Download, Scripts, FAQ')">📊 Site Info</button>
-            <button class="dev-btn" onclick="localStorage.clear();alert('✅ Cache cleared!')">🗑️ Clear Cache</button>
-            <button class="dev-btn" onclick="location.reload()">🔄 Reload</button>
-            <button class="dev-btn" onclick="document.body.style.background='#ffffff';document.body.style.color='#000000'">☀️ Light</button>
-            <button class="dev-btn" onclick="document.body.style.background='#0b0b12';document.body.style.color='#ffffff'">🌙 Dark</button>
-            <button class="dev-btn dev-close" onclick="document.getElementById('devPanel').style.display='none'">❌ Close</button>
-        </div>
-    </div>
-
-    <!-- Dev Indicator -->
-    <div class="dev-indicator" id="devIndicator" onclick="document.getElementById('devPanel').style.display='block'">🔧 Dev</div>
-
-    <script>
-        const YOUR_IP = '154.81.235.24';
-
-        async function checkDev() {
-            try {
-                const res = await fetch('https://api.ipify.org?format=json');
-                const data = await res.json();
-                if (data.ip === YOUR_IP) {
-                    document.getElementById('devPanel').style.display = 'block';
-                    document.getElementById('devIndicator').classList.add('active');
-                }
-            } catch(e) {}
-        }
-        checkDev();
-    </script>
 </body>
 </html>
