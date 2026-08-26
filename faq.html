@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>FAQ - Delta</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>FAQ - Delta Executor</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <canvas id="particlesCanvas"></canvas>
     <div class="container">
         <header>
-            <div class="logo">Δ Delta</div>
+            <a href="index.html" class="logo">
+                <img src="https://i.postimg.cc/XXGjwTJ7/ccf6b463-2600-298f-09c3-3d63594a99f4.webp" alt="Delta Ninja Logo" />
+                <span class="text">Delta <span>Executor</span></span>
+            </a>
             <div class="tabs">
                 <a href="index.html" class="tab">Home</a>
-                <a href="download.html" class="tab active">Download</a>
+                <a href="download.html" class="tab">Download</a>
                 <a href="scripts.html" class="tab">Scripts</a>
-                <a href="faq.html" class="tab">FAQ</a>
+                <a href="faq.html" class="tab active">FAQ</a>
             </div>
         </header>
-
-        <section class="faq-section">
-            <h1>⁉️ FAQ</h1>
-            <p>Everything you need to know about Delta.</p>
-            <div class="faq-item"><strong>Is Delta completely free?</strong><p>Yes, Delta is 100% free to use.</p></div>
-            <div class="faq-item"><strong>Is my account safe with Delta?</strong><p>Absolutely. Delta uses industry‑leading encryption and anti‑detection.</p></div>
+        <section class="page active" id="page-faq">
+            <div class="faq-section">
+                <h1>FAQ</h1>
+                <p>Everything you need to know about Delta.</p>
+                <div class="faq-item"><strong>Is Delta completely free?</strong><p>Yes, Delta is 100% free to use.</p></div>
+                <div class="faq-item"><strong>Is my account safe with Delta?</strong><p>Absolutely. Delta uses industry‑leading encryption and anti‑detection.</p></div>
+            </div>
         </section>
-
         <footer>
-            <p>© 2026 Delta • All rights reserved </p>
-            <p> ~ Made By LEGEND ~ <p>
+            <p>© 2026 Delta • All rights reserved.</p>
+            <p>~ Made By LEGEND ~</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
