@@ -610,3 +610,13 @@ footer p {
     .logo .text { font-size: 18px; }
     .logo { gap: 12px; }
 }
+.script-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    display: inline-block;
+}
