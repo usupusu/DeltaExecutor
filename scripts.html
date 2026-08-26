@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Scripts - Delta</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Scripts - Delta Executor</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <canvas id="particlesCanvas"></canvas>
     <div class="container">
         <header>
-            <div class="logo">Δ Delta</div>
+            <a href="index.html" class="logo">
+                <img src="https://i.postimg.cc/XXGjwTJ7/ccf6b463-2600-298f-09c3-3d63594a99f4.webp" alt="Delta Ninja Logo" />
+                <span class="text">Delta <span>Executor</span></span>
+            </a>
             <div class="tabs">
                 <a href="index.html" class="tab">Home</a>
                 <a href="download.html" class="tab">Download</a>
@@ -17,52 +21,46 @@
                 <a href="faq.html" class="tab">FAQ</a>
             </div>
         </header>
-
-        <section class="scripts-section">
-            <h1>📜 Script Library</h1>
-            <p class="sub">Every script is for High School Life RP</p>
-            <div class="script-grid">
-                <div class="script-card">
-                    <div class="top"><span class="icon">👤</span><h4>Korblox &amp; Headless</h4></div>
-                    <div class="code">loadstring(game:HttpGet("https://gist.githubusercontent.com/usupusu/98088fd31f7dd52916d844ca768dc448/raw/d6cabf76266a4c25139ea4c482d8f5c0aec71544/Korblox&headless"))()</div>
-                    <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+        <section class="page active" id="page-scripts">
+            <div class="scripts-section">
+                <h1>Script Library</h1>
+                <p class="sub">Every script is for High School Life RP</p>
+                <div class="script-grid">
+                    <div class="script-card">
+                        <div class="code">loadstring(game:HttpGet("https://gist.githubusercontent.com/usupusu/98088fd31f7dd52916d844ca768dc448/raw/d6cabf76266a4c25139ea4c482d8f5c0aec71544/Korblox&headless"))()</div>
+                        <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+                    </div>
+                    <div class="script-card">
+                        <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/Aurakill2.lua"))()</div>
+                        <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+                    </div>
+                    <div class="script-card">
+                        <div class="code">loadstring(game:HttpGet("https://gist.githubusercontent.com/usupusu/34da13a55e7ec10ab5c58a1192f10527/raw/f9775cdaf755853dac2cb5b8978ef7b551d5fb32/Biochanger2.lua"))()</div>
+                        <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+                    </div>
+                    <div class="script-card">
+                        <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/Headless.lua"))()</div>
+                        <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+                    </div>
+                    <div class="script-card">
+                        <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/Spamgrab.lua"))()</div>
+                        <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+                    </div>
+                    <div class="script-card">
+                        <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/legendhub.lua"))()</div>
+                        <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+                    </div>
+                    <div class="script-card">
+                        <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/main/Bioflicker.lua"))()</div>
+                        <button class="copy-btn" onclick="copyScript(this)">Copy</button>
+                    </div>
                 </div>
-                <div class="script-card">
-                    <div class="top"><span class="icon">💀</span><h4>Aura Kill</h4></div>
-                    <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/Aurakill2.lua"))()</div>
-                    <button class="copy-btn" onclick="copyScript(this)">Copy</button>
-                </div>
-                <div class="script-card">
-                    <div class="top"><span class="icon">✏️</span><h4>Bio Changer</h4></div>
-                    <div class="code">loadstring(game:HttpGet("https://gist.githubusercontent.com/usupusu/34da13a55e7ec10ab5c58a1192f10527/raw/f9775cdaf755853dac2cb5b8978ef7b551d5fb32/Biochanger2.lua"))()</div>
-                    <button class="copy-btn" onclick="copyScript(this)">Copy</button>
-                </div>
-                <div class="script-card">
-                    <div class="top"><span class="icon">👤</span><h4>Headless</h4></div>
-                    <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/Headless.lua"))()</div>
-                    <button class="copy-btn" onclick="copyScript(this)">Copy</button>
-                </div>
-                <div class="script-card">
-                    <div class="top"><span class="icon">📨</span><h4>Spam Grab</h4></div>
-                    <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/Spamgrab.lua"))()</div>
-                    <button class="copy-btn" onclick="copyScript(this)">Copy</button>
-                </div>
-                <div class="script-card">
-                    <div class="top"><span class="icon">🏆</span><h4>Legend Hub</h4></div>
-                    <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/refs/heads/main/legendhub.lua"))()</div>
-                    <button class="copy-btn" onclick="copyScript(this)">Copy</button>
-                </div>
-                <div class="script-card">
-                    <div class="top"><span class="icon">✨</span><h4>Bio Blinker</h4></div>
-                    <div class="code">loadstring(game:HttpGet("https://raw.githubusercontent.com/usupusu/My-scripts-/main/Bioflicker.lua"))()</div>
-                    <button class="copy-btn" onclick="copyScript(this)">Copy</button>
-                </div>
+                <p class="note">⚠️ Every script is for High School Life RP</p>
             </div>
-            <p class="note">⚠️ Every script is for High School Life RP</p>
         </section>
-
         <footer>
-            <p>© 2026 Delta • All rights reserved.   </p>
+            <p>© 2026 Delta • All rights reserved.</p>
+            <p>~ Made By LEGEND ~</p>
         </footer>
     </div>
     <script src="script.js"></script>
