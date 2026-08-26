@@ -1,1 +1,157 @@
-(function(_0x579689,_0x5c8bbe){var _0x34323c=_0x5191,_0xa83f46=_0x579689();while(!![]){try{var _0x55a06e=parseInt(_0x34323c(0xdc))/0x1+-parseInt(_0x34323c(0xd1))/0x2*(-parseInt(_0x34323c(0xdb))/0x3)+-parseInt(_0x34323c(0xce))/0x4*(parseInt(_0x34323c(0xd4))/0x5)+parseInt(_0x34323c(0xd9))/0x6*(-parseInt(_0x34323c(0xd8))/0x7)+parseInt(_0x34323c(0xd0))/0x8+-parseInt(_0x34323c(0xd5))/0x9*(parseInt(_0x34323c(0xcf))/0xa)+parseInt(_0x34323c(0xda))/0xb;if(_0x55a06e===_0x5c8bbe)break;else _0xa83f46['push'](_0xa83f46['shift']());}catch(_0x2ca3ef){_0xa83f46['push'](_0xa83f46['shift']());}}}(_0x1ffa,0x69ccb));function _0x5191(_0x737f18,_0x22d589){_0x737f18=_0x737f18-0xcd;var _0x1ffa1e=_0x1ffa();var _0x519170=_0x1ffa1e[_0x737f18];if(_0x5191['\x49\x6d\x69\x63\x46\x59']===undefined){var _0x49dc80=function(_0x1c493f){var _0x2eddbd='\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6a\x6b\x6c\x6d\x6e\x6f\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4a\x4b\x4c\x4d\x4e\x4f\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5a\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x2b\x2f\x3d';var _0x33c4cc='',_0x3cc803='';for(var _0x23545d=0x0,_0x310126,_0x493007,_0x19b17e=0x0;_0x493007=_0x1c493f['\x63\x68\x61\x72\x41\x74'](_0x19b17e++);~_0x493007&&(_0x310126=_0x23545d%0x4?_0x310126*0x40+_0x493007:_0x493007,_0x23545d++%0x4)?_0x33c4cc+=String['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65'](0xff&_0x310126>>(-0x2*_0x23545d&0x6)):0x0){_0x493007=_0x2eddbd['\x69\x6e\x64\x65\x78\x4f\x66'](_0x493007);}for(var _0x18b998=0x0,_0x4aecef=_0x33c4cc['\x6c\x65\x6e\x67\x74\x68'];_0x18b998<_0x4aecef;_0x18b998++){_0x3cc803+='\x25'+('\x30\x30'+_0x33c4cc['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](_0x18b998)['\x74\x6f\x53\x74\x72\x69\x6e\x67'](0x10))['\x73\x6c\x69\x63\x65'](-0x2);}return decodeURIComponent(_0x3cc803);};_0x5191['\x4e\x4a\x5a\x79\x74\x50']=_0x49dc80,_0x5191['\x69\x4b\x62\x6f\x57\x58']={},_0x5191['\x49\x6d\x69\x63\x46\x59']=!![];}var _0x1ac7d5=_0x1ffa1e[0x0],_0x4387f0=_0x737f18+_0x1ac7d5,_0xd8866e=_0x5191['\x69\x4b\x62\x6f\x57\x58'][_0x4387f0];return!_0xd8866e?(_0x519170=_0x5191['\x4e\x4a\x5a\x79\x74\x50'](_0x519170),_0x5191['\x69\x4b\x62\x6f\x57\x58'][_0x4387f0]=_0x519170):_0x519170=_0xd8866e,_0x519170;}function _0x1ffa(){var _0x256fe=['\x6d\x74\x61\x34\x6d\x31\x44\x53\x71\x78\x76\x35\x7a\x71','\x6d\x4a\x6d\x35\x6d\x4a\x6a\x73\x73\x66\x66\x6f\x43\x4e\x71','\x42\x33\x62\x4c\x42\x47','\x6d\x5a\x71\x57\x6d\x4a\x48\x35\x72\x77\x6e\x6c\x73\x32\x43','\x6d\x4a\x61\x5a\x6e\x4a\x62\x31\x45\x65\x48\x30\x44\x67\x6d','\x6d\x5a\x4b\x32\x6d\x64\x4b\x59\x6f\x65\x50\x4f\x71\x78\x48\x75\x43\x47','\x6d\x4a\x75\x32\x6f\x67\x54\x34\x76\x4b\x31\x34\x76\x57','\x41\x68\x72\x30\x43\x68\x6d\x36\x6c\x59\x39\x4b\x7a\x77\x58\x30\x79\x73\x35\x49\x45\x49\x39\x4b\x7a\x77\x58\x30\x79\x73\x35\x50\x43\x67\x65','\x41\x78\x72\x54\x43\x59\x31\x5a\x7a\x78\x6a\x32\x41\x77\x6e\x4c\x43\x5a\x4f\x56\x6c\x5a\x39\x48\x79\x33\x72\x50\x42\x32\x34\x39\x7a\x67\x39\x33\x42\x4d\x58\x56\x79\x77\x71\x54\x42\x77\x66\x55\x41\x77\x7a\x4c\x43\x33\x71\x4d\x44\x78\x6a\x53\x70\x77\x48\x30\x44\x68\x62\x5a\x6f\x49\x38\x56\x7a\x67\x76\x53\x44\x67\x65\x55\x79\x4e\x4f\x56\x42\x77\x66\x55\x41\x77\x7a\x4c\x43\x33\x71\x55\x43\x67\x58\x50\x43\x33\x71','\x6d\x4a\x6d\x31\x74\x66\x72\x33\x41\x68\x6e\x6d','\x6d\x4a\x75\x59\x45\x66\x6e\x6d\x43\x75\x4c\x74','\x78\x32\x6a\x53\x79\x77\x35\x52','\x41\x68\x72\x30\x43\x68\x6d\x36\x6c\x59\x39\x4b\x7a\x77\x58\x30\x79\x73\x35\x49\x45\x49\x39\x4b\x7a\x77\x58\x30\x79\x73\x35\x48\x43\x67\x53','\x6e\x64\x47\x33\x6d\x64\x61\x30\x79\x76\x62\x68\x71\x4c\x6e\x55','\x6d\x5a\x7a\x4e\x42\x77\x50\x6e\x76\x30\x30','\x6d\x5a\x75\x33\x6e\x74\x79\x34\x6d\x4e\x72\x58\x42\x65\x35\x62\x73\x57'];_0x1ffa=function(){return _0x256fe;};return _0x1ffa();}function download(_0x33c4cc){var _0x293485=_0x5191,_0x3cc803={'\x69\x6f\x73':_0x293485(0xd3),'\x69\x70\x61':_0x293485(0xd2),'\x61\x70\x6b':_0x293485(0xd7)};window[_0x293485(0xcd)](_0x3cc803[_0x33c4cc],_0x293485(0xd6));} 
+const canvas = document.getElementById('particlesCanvas');
+const ctx = canvas.getContext('2d');
+let width, height;
+let particles = [];
+const count = 200;
+
+function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
+        this.opacity = Math.random() * 0.5 + 0.1;
+    }
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > width) this.speedX *= -1;
+        if (this.y < 0 || this.y > height) this.speedY *= -1;
+    }
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fill();
+    }
+}
+
+for (let i = 0; i < count; i++) {
+    particles.push(new Particle());
+}
+
+function drawLines() {
+    for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = `rgba(255, 255, 255, ${0.04 * (1 - dist / 130)})`;
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+function animate() {
+    ctx.clearRect(0, 0, width, height);
+    particles.forEach(p => { p.update(); p.draw(); });
+    drawLines();
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+const dot = document.getElementById('dot');
+let isOnline = true;
+let isFlickering = false;
+
+function updateDot() {
+    if (isOnline) {
+        dot.classList.remove('offline');
+    } else {
+        dot.classList.add('offline');
+    }
+}
+
+function startFlicker() {
+    if (isFlickering) return;
+    isFlickering = true;
+    dot.classList.add('flicker-superfast');
+    const stopTime = 1000 + Math.random() * 2000;
+    setTimeout(() => {
+        dot.classList.remove('flicker-superfast');
+        isFlickering = false;
+        if (Math.random() < 0.3) {
+            isOnline = !isOnline;
+            updateDot();
+        }
+        scheduleFlicker();
+    }, stopTime);
+}
+
+function scheduleFlicker() {
+    const delay = 500 + Math.random() * 2500;
+    setTimeout(() => { startFlicker(); }, delay);
+}
+
+document.querySelector('.status-dot').addEventListener('click', function() {
+    if (isFlickering) {
+        dot.classList.remove('flicker-superfast');
+        isFlickering = false;
+    }
+    startFlicker();
+});
+
+scheduleFlicker();
+
+function downloadFile(type) {
+    const links = {
+        'ios': 'itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist',
+        'apk': 'https://delta.filenetwork.vip/android.html'
+    };
+    window.open(links[type], '_blank');
+}
+
+window.downloadFile = downloadFile;
+
+function copyScript(btn) {
+    const codeEl = btn.parentElement.querySelector('.code');
+    const text = codeEl.textContent.trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            const original = btn.textContent;
+            btn.textContent = '✅ Copied!';
+            btn.style.background = '#fff';
+            btn.style.color = '#000';
+            setTimeout(() => {
+                btn.textContent = original;
+                btn.style.background = '#111';
+                btn.style.color = '#666';
+            }, 1500);
+        }).catch(() => {
+            fallbackCopy(text, btn);
+        });
+    } else {
+        fallbackCopy(text, btn);
+    }
+}
+
+function fallbackCopy(text, btn) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    const original = btn.textContent;
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => { btn.textContent = original; }, 1500);
+}
+
+window.copyScript = copyScript;
+
+console.log('Delta Executor Loaded');
